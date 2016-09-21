@@ -1,0 +1,15 @@
+kfz    -> bstT ' ' PbstT zahlT 
+        | Y- zahl6
+bstT   -> bst | bst bst | bst bst bst 
+PbstT  -> bst | bst bst 
+zahlTr -> zahl zahl 
+        | zahl zahl zahl 
+        | zahl zahl zahl zahl 
+zahl6  -> zahl
+        | zahlTr
+        | zahl zahl zahl zahl zahl
+        | zahl zahl zahl zahl zahl zahl
+zahlT  -> zahlTr H 
+bst    -> A | ... | Z 
+        | a | ... | z 
+zahl   -> 0 | ... | 9 
