@@ -1,0 +1,3 @@
+S -> 'Da'|'Li'
+S -> 'Da''Da'S|'Da'S'Li'|L'Mo'
+L -> 'Li'|L S'Mo'
