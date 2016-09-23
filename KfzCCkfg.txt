@@ -1,19 +1,18 @@
-kfz    -> bstT ' ' PbstT zahlT 
-        | Y- zahl6
-        | mofaZahlT mofaBstT
-bstT   -> bst | bst bst | bst bst bst 
-PbstT  -> bst | bst bst 
-zahlTr -> zahl zahl 
-        | zahl zahl zahl 
-        | zahl zahl zahl zahl 
-zahl6  -> zahl
-        | zahlTr
-        | zahl zahl zahl zahl zahl
-        | zahl zahl zahl zahl zahl zahl
-zahlT  -> zahlTr H 
-mofaZahlT -> zahl zahl zahl
-mofaBstT -> bst bst
-bst    -> A | ... | Z 
+kfz    -> charT ' ' PcharT intT 
+        | Y- int6
+        | intMofaT charMofaT
+charT   -> char | char char | char char char 
+PcharT  -> char | char char 
+intTr -> int int 
+        | int int int 
+        | int int int int 
+int6  -> int
+        | intTr
+        | int int int int int
+        | int int int int int int
+intT  -> intTr H 
+intMofaT -> int int int
+charMofaT -> char char char
+char    -> A | ... | Z 
         | a | ... | z 
-zahl   -> 0 | ... | 9 
-
+int   -> 0 | ... | 9 
