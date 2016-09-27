@@ -1,0 +1,8 @@
+code -> haltInt '-' countryCode '-' identityCode
+haltInt -> 0 | 1 | 2 | 3
+countryCode -> 'DE' | 'AT' | 'BE' | 'NL'
+identityCode -> stateCode justSomeInts int
+stateCode -> zoo int
+zoo -> 0 | 1
+justSomeInts -> int int int int
+int -> 0 | ... | 9
