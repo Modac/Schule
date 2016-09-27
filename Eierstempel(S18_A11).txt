@@ -1,8 +1,11 @@
-code -> haltInt '-' countryCode '-' identityCode
-haltInt -> 0 | 1 | 2 | 3
-countryCode -> 'DE' | 'AT' | 'BE' | 'NL'
-identityCode -> stateCode justSomeInts int
-stateCode -> zoo int
-zoo -> 0 | 1
-justSomeInts -> int int int int
-int -> 0 | ... | 9
+code         -> haltInt - countryCode - identityCode 
+haltInt      -> int0_3
+countryCode  -> AT | BE | DE | NL 
+identityCode -> stateCode justSomeInts int 
+stateCode    -> 0 int1_9 | 1 int0_6
+justSomeInts -> int int int int 
+int1_3       -> 1 | 2 | 3
+int0_3       -> 0 | int1_3
+int1_9       -> int1_3 | 4 | 5 | 6 | 7 | 8 | 9
+int0_6       -> int0_3 | 4 | 5 | 6
+int          -> 0 | int1_9
